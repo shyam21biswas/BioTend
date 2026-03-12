@@ -1,26 +1,8 @@
 # 📱 BioTend — Smart Attendance App
 
-![Platform](https://img.shields.io/badge/Platform-Android-green?logo=android)
-![Language](https://img.shields.io/badge/Language-Kotlin-blueviolet?logo=kotlin)
-![UI](https://img.shields.io/badge/UI-Jetpack%20Compose-blue?logo=jetpackcompose)
-![Backend](https://img.shields.io/badge/Backend-Firebase-orange?logo=firebase)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-> An Android application for **smart, secure, and location-based attendance tracking** built using **Kotlin**, **Jetpack Compose**, and **Firebase Firestore**.
 
----
-
-## 📋 Table of Contents
-
-- [Overview](#-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [How It Works](#-how-it-works)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Screenshots](#-screenshots)
-- [Contributing](#-contributing)
-- [License](#-license)
+### An Android application for **smart, secure, and location-based attendance tracking** built using **Kotlin**, **Jetpack Compose**, and **Firebase Firestore**.
 
 ---
 
@@ -29,7 +11,49 @@
 **BioTend** is a modern Android attendance system designed for educational institutions. It combines **GPS-based geofencing** and **biometric authentication** to ensure students can only mark attendance when they are physically present in the classroom. Teachers get full control over attendance sessions with real-time monitoring and manual override capabilities.
 
 ---
+## 📸 Screenshots
 
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=177PLj8jx8Vym3SfJODiWrQJ-p44ljbkJ" width="250"/>
+  <img src="https://drive.google.com/uc?export=view&id=1cJ_NlXSfPSZSI2Q_VhLuuBZRx3PdQBFE" width="250"/>
+  <img src="https://drive.google.com/uc?export=view&id=1CPSS4puyyCV_MHC4T5EDpeecxtoFNC4a" width="250"/>
+</p>
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1Yx_bUkTZtsSlt7tbxxFHh48wekucjgy1" width="250"/>
+  <img src="https://drive.google.com/uc?export=view&id=14Ux4VRSZRsIGK13RkTYI-LaEuckad2BB" width="250"/>
+  <img src="https://drive.google.com/uc?export=view&id=1SGCV-iD3HKV7BjWGP3Qdk4Gei6Qd_iPt" width="250"/>
+</p>
+
+---
+## 📱 Project Flow
+
+```mermaid
+flowchart TD
+    A[Open App] --> B[Select Role]
+
+    B -->|Teacher| C[Google Sign-In]
+    B -->|Student| D[Google Sign-In]
+
+    C --> E[Teacher Dashboard]
+    E --> F[Create Class]
+    E --> G[Activate Attendance]
+    E --> H[Manually Give Attendance]
+    E --> I[Stop Taking Attendance]
+    E --> J[Update Current Location]
+
+    D --> K[Student Dashboard]
+    K --> L[Join Class Using Class Code]
+    K --> M[View Joined Class Card]
+    M --> N[Click Class Card]
+    N --> O[Verify Student Location]
+    O --> P{Inside Teacher Range?}
+    P -->|Yes| Q[Mark Attendance]
+    P -->|No| R[Attendance Not Allowed]
+```
+
+
+---
 ## 🚀 Features
 
 ### 🔐 Authentication
@@ -82,25 +106,6 @@
 
 ---
 
-## 🗂 Project Structure
-
-```
-BioTend/
-├── app/
-│   ├── src/main/
-│   │   ├── java/com/biotend/
-│   │   │   ├── ui/           # Jetpack Compose screens & components
-│   │   │   ├── data/         # Firebase repositories & data models
-│   │   │   ├── domain/       # Business logic & use cases
-│   │   │   ├── di/           # Dependency injection modules
-│   │   │   └── utils/        # Utility helpers (location, biometric, etc.)
-│   │   └── res/              # Resources (themes, strings, etc.)
-├── build.gradle.kts
-└── README.md
-```
-
----
-
 ## ⚙️ Getting Started
 
 ### Prerequisites
@@ -131,11 +136,7 @@ BioTend/
 
 ---
 
-## 📸 Screenshots
 
-> _Screenshots coming soon!_
-
----
 
 ## 🤝 Contributing
 
