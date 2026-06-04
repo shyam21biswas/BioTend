@@ -11,6 +11,8 @@
 **BioTend** is a modern Android attendance system designed for educational institutions. It combines **GPS-based geofencing** and **biometric authentication** to ensure students can only mark attendance when they are physically present in the classroom. Teachers get full control over attendance sessions with real-time monitoring and manual override capabilities.
 
 ---
+
+### Production Version:  https://github.com/shyam21biswas/BIOTEND-PROD/blob/master/README.md
 ## 📸 Screenshots
 
 <p align="center">
